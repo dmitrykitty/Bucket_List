@@ -1,4 +1,4 @@
-project(unit_tests)
+project(tests)
 
 # 'lib' is the folder with Google Test sources
 add_subdirectory(lib)
@@ -17,14 +17,14 @@ add_executable(${PROJECT_NAME} ${TEST_SOURCES} ${SOURCES_WITHOUT_MAIN})
 target_link_libraries(${PROJECT_NAME} gtest gtest_main)
 
 
-############ KOMENDA: make run_unit_tests
+############ KOMENDA: make run_tests
 add_custom_target(run_${PROJECT_NAME}
     COMMAND ${PROJECT_NAME}
     DEPENDS ${PROJECT_NAME}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-############ KOMENDA: make valgrind_unit_tests
+############ KOMENDA: make valgrind_tests
 find_program(VALGRIND NAMES valgrind)
 if (VALGRIND)
     add_custom_target(valgrind_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}
@@ -32,7 +32,7 @@ if (VALGRIND)
         WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 endif()
 
-############ KOMENDA: make cppcheck_unit_tests
+############ KOMENDA: make cppcheck_tests
 find_program(CPPCHECK NAMES cppcheck)
 if (CPPCHECK)
     add_custom_target(cppcheck_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}

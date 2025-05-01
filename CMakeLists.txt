@@ -4,7 +4,7 @@ project(zad9SortedUniqueVectoredList)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-set(UNIT_TEST_DIRECTORY "unit_tests")
+set(UNIT_TEST_DIRECTORY "tests")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CheckCXXCompilerFlag)
