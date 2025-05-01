@@ -1,7 +1,7 @@
 #ifndef SORTED_UNIQUE_VECTORED_LIST_H
 #define SORTED_UNIQUE_VECTORED_LIST_H
 
-#include <cstddef>   // size_t
+#include <cstddef>   // std::size_t
 #include <string>
 
 
@@ -111,10 +111,10 @@ public:
      *  @param index elementu tekstowego w kontenerze
      *  @exception w razie podania
      *  @throw std::out_of_range w razie, gdy `index >= size_` **/
-    std::string& operator[](size_t index);
+    std::string& operator[](std::size_t index);
 
     /** @brief operator indeksowania, podobny do powyzszego @ref operator[], ale zwraca `const string` i jest metoda stala **/
-    const std::string& operator[](size_t index) const;
+    const std::string& operator[](std::size_t index) const;
 
     /** @brief operator, ktory tworzy kontener zawierajacy wszystkie elementy z pierwszego kontenera, ktorych nie ma w kontenerze `another`
      *  @param another kontener, ktorego elementy maja byc usuniete z `this` o ile w nim sa
@@ -134,7 +134,7 @@ public:
            a *= 0;
            // a zawiera ""
         @endcode **/
-    SortedUniqueVectoredList& operator*=(const size_t howManyTimesMultiply);
+    SortedUniqueVectoredList& operator*=(const std::size_t howManyTimesMultiply);
 
     /** @brief operator konwersji, ktory wszystkie teksty polaczy w jeden bez jakichkolwiek separatorow
      *  @return tekst zawierajacy wszystkie teksty **/
