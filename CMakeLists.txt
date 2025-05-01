@@ -122,13 +122,42 @@ endif()
 ############ KOMENDA: make docs
 find_program(DOXYGEN NAMES doxygen)
 if (DOXYGEN)
+    # Uwaga - komenda nie jest w pełni dopracowana (nie pobiera nazwy projektu). Poza tym wymaga zależności do pełnego działania (do generacji PDFów)
     message("\t* doxygen found: ${DOXYGEN}")
+
     add_custom_target(docs
-        COMMAND ${DOXYGEN} ${CMAKE_CURRENT_SOURCE_DIR}
-        COMMAND make -C ${CMAKE_CURRENT_SOURCE_DIR}/latex
-        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/latex/refman.pdf "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_coDoZrobienia.pdf"
+        # 1. Wygeneruj dokumentację (latex/, html/)
+        COMMAND ${DOXYGEN} ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile
+
+        # 2. Skopiuj obrazki (np. diagramy) do latex/, jeśli są wymagane
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/doxyfiles ${CMAKE_CURRENT_SOURCE_DIR}/latex
+
+        COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_CURRENT_SOURCE_DIR}/README.md ${CMAKE_CURRENT_SOURCE_DIR}/latex/
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/doxyfiles ${CMAKE_CURRENT_SOURCE_DIR}/latex/
+
+
+        # 3. Buduj PDF z latex/refman.tex – 2x dla poprawnych spisów treści
+        COMMAND ${CMAKE_COMMAND} -E chdir ${CMAKE_CURRENT_SOURCE_DIR}/latex pdflatex -interaction=nonstopmode refman.tex
+        COMMAND ${CMAKE_COMMAND} -E chdir ${CMAKE_CURRENT_SOURCE_DIR}/latex pdflatex -interaction=nonstopmode refman.tex
+
+        # 4. Przenieś wynikowy PDF do katalogu binarnego jako: nazwaprojektu_coDoZrobienia.pdf
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                ${CMAKE_CURRENT_SOURCE_DIR}/latex/refman.pdf
+                ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_coDoZrobienia.pdf
+
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-        COMMENT "Generating documentation using Doxygen"
+        COMMENT "Generating documentation using Doxygen + pdflatex"
+        USES_TERMINAL
+    )
+endif()
+
+
+############ KOMENDA: make show_tree
+find_program(TREE NAMES tree)
+if (TREE)
+    add_custom_target(show_tree
+        COMMAND ${CMAKE_COMMAND} -E echo "File structure:"
+        COMMAND tree -L2
         USES_TERMINAL
     )
 endif()
