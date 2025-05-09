@@ -22,7 +22,7 @@ Znajduje się w [nagraniu](https://banbye.com/watch/v_6T6XUh24ug8l):
 
 ## Dodatkowe wymagania:
 Dla osób, którym się uda doprowadzić do sytuacji, że wszystkie testy przejdą proponuję dorobić następujące rzeczy:
-1. Iterator (1/2 punkta z aktywności za zaimplementowanie + 1/2 punkta z aktywności za testy do tego)
+1. Iterator (1 punkt z aktywności za zaimplementowanie + 1 punkt z aktywności za testy do tego)
 
 ____________________________________________________________________________________
 ## Podpięte narzędzia przy sprawdzaniu (wyniki w katalogu `logs/`):
