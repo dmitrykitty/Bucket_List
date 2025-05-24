@@ -39,7 +39,13 @@ class SortedUniqueVectoredList {
         Bucket* next = nullptr;
         Bucket* previous = nullptr;
 
-        Bucket() = default;
+        Bucket(const Bucket& other): values(other.values), size(other.size){}
+        Bucket(const std::string& str): size(1) {
+            values[0] = str;
+        }
+
+        void removeAt(size_t index);
+
     };
     Bucket *head = nullptr, *tail = nullptr;
     size_t bucketCount_{}, size_{}, capacity_{};
@@ -86,6 +92,8 @@ public:
     Iterator end() const { return {nullptr}; }
 
 
+
+
     /** @brief konstruktor domyslny, jego zadaniem jest ustawienie pol klasy na brak elementow **/
     SortedUniqueVectoredList() = default;
 
@@ -93,16 +101,19 @@ public:
      *  @param source - kontener zrodkowy, z ktorego musza byc skopiowane wszystkie dane
      *  @note jak dobrze zaimplementujemy metode @ref SortedUniqueVectoredList::copy to wystarczy ja tutaj zawolac **/
     SortedUniqueVectoredList(const SortedUniqueVectoredList& source);
+    //IMPLEMENTED
 
     /** @brief konstruktor przenoszacy, ktory cala zawartosc z innego kontenera przeniesie zostawiajac
      *  @param source - kontener zrodkowy, z ktorego musza byc przeniesione wszystkie dane
      *  @note kontener zrodlowy w stanie jak po zawolaniu konstruktora bezargumentowego
      *  @note jak dobrze zaimplementujemy metody @ref SortedUniqueVectoredList::move i @ref SortedUniqueVectoredList::free to warto je tutaj zawolac **/
-    SortedUniqueVectoredList(SortedUniqueVectoredList&& source);
+    SortedUniqueVectoredList(SortedUniqueVectoredList&& source) noexcept;
+    //IMPLEMENTED
 
     /** @brief destruktor, ktory musi koniecznie zwolnic pamiec i inne zasoby
      *  @note jak dobrze zaimplementujemy metode @ref SortedUniqueVectoredList::free to wystarczy ja tutaj zawolac **/
     ~SortedUniqueVectoredList();
+    //IMPLEMENTED
 
     /** @brief operator przypisania, ktory ma za zadanie skopiowac doglebnie tresc, analogicznie jak konstruktor kopiujacy \ref SortedUniqueVectoredList(const SortedUniqueVectoredList&)
      *  @note prosze sie upewnic, ze zadziala przypisanie na samego siebie: @code{.cpp}
@@ -116,7 +127,8 @@ public:
         @endcode
         @details Operator przypisania powinien **zwolnic pamiec** w razie potrzeby, aby nie dopuscic do wyciekow pamieci.
             Mozna uzyc [idiomu copy&swap](https://en.m.wikibooks.org/wiki/More_C%2B%2B_Idioms/Copy-and-swap). **/
-    SortedUniqueVectoredList& operator=(const SortedUniqueVectoredList& another);
+    SortedUniqueVectoredList& operator=(SortedUniqueVectoredList another);
+    //IMPLEMENTED
 
     /** @brief operator przypisania, ktory ma za zadanie przeniesc zawartosc z obiektu zrodlowego
      *  @note prosze sie upewnic, ze zadziala przypisanie na samego siebie: @code{.cpp}
@@ -131,6 +143,7 @@ public:
 
     /** @brief Metoda zwracajaca aktualnie posiadana ilosc elementow w kontenerze.
      *  @return wartosc `size_` **/
+
     auto size() const {
         return size_;
     }
@@ -154,6 +167,7 @@ public:
      *  @note Nie musi byc optymalnie - mozna pojechac po calym kontenerze kazdorazowo i caly kontener sortowac po kazdym wstawieniu.
      *  @details Sugeruje przed wstawieniem elementu sprawdzic czy takowy jest juz w kontenerze. **/
     void insert(const std::string& value);
+    //IMPLEMENTED
 
     /** @brief operator indeksowania, ktory otrzymawszy indeks zwroci referencje do tekstu znajdujacego sie na danej pozycji w kontenerze
      *  @param index elementu tekstowego w kontenerze
@@ -187,9 +201,11 @@ public:
     /** @brief operator konwersji, ktory wszystkie teksty polaczy w jeden bez jakichkolwiek separatorow
      *  @return tekst zawierajacy wszystkie teksty **/
     explicit operator std::string() const;
+    //IMPLEMENTED
 
     /** @brief Opcjonalne (nie ma na to testow): metoda usuwajacy element o danej wartosci **/
     void erase(const std::string& value);
+    //IMPLEMENTED
 
     /** @brief Opcjonalne (nie ma na to testow) **/
     friend std::ostream& operator<<(std::ostream& stream, const SortedUniqueVectoredList& container);
@@ -198,15 +214,21 @@ protected
 :
     /** @brief metoda pomocnicza allokujaca nowy @ref Bucket na koncu listy (nowy @ref SortedUniqueVectoredList::tail)
      *  @note prosze pamietac o @ref SortedUniqueVectoredList::bucketCount_ @ref SortedUniqueVectoredList::capacity_ **/
-    void allocate_new_bucket();
+    void addBucket(const Bucket& other);
+    //IMPLEMENTED
 
     /** @brief metoda pomocnicza zwalniajaca zasoby
      *  @note nie tylko @ref SortedUniqueVectoredList::head i @ref SortedUniqueVectoredList::tail powinny byc zwolnione, ale rowniez wszystko pomiedzy **/
     void free();
+    //IMPLEMENTED
 
     /** @brief metoda pomocnicza przenoszaca zawartosc z obiektu zrodlowego na *this.
      *  @note nalezy pamietac o zwalnianiu zasobow **/
     void move(SortedUniqueVectoredList&& another);
+    //IMPLEMENTED
+
+    void swap(SortedUniqueVectoredList& other);
+    //IMPLEMENTED
 
     /** @brief metoda pomocnicza kopiujaca z obiektu zrodlowego na *this.
      *  @note nalezy pamietac o zwalnianiu zasobow **/
@@ -216,8 +238,6 @@ protected
      *  @details nie musi byc optymalna, moze isc sekwencyjnie po wszystkich elementach **/
     bool contains(const std::string& value) const;
 
-private
-:
 };
 
 
