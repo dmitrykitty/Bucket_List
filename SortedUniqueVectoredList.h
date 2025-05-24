@@ -29,11 +29,62 @@
  * @param bucketCount_ ilosc kubelkow
  * @param head wskaznik na pierwszy @ref Bucket (zwykły lub inteligentny wskaźnik)
  * @param tail wskaznik na pierwszy @ref Bucket (zwykły lub inteligentny wskaźnik) **/
-class SortedUniqueVectoredList
-{
+class SortedUniqueVectoredList {
+    struct Bucket {
+        constexpr static size_t BUCKET_SIZE = 10;
+
+        std::array<std::string, BUCKET_SIZE> values;
+        size_t size{};
+
+        Bucket* next = nullptr;
+        Bucket* previous = nullptr;
+
+        Bucket() = default;
+    };
+    Bucket *head = nullptr, *tail = nullptr;
+    size_t bucketCount_{}, size_{}, capacity_{};
+
 public:
-    /// opis w pliku @ref SortedUniqueVectoredList.cpp, jest to tzw. idiom PIMPL
-    struct Bucket;
+    class Iterator {
+        Bucket* buck_ptr{};
+
+    public:
+        Iterator() = default;
+
+        Iterator(Bucket* ptr): buck_ptr(ptr) {}
+        //copy konstruktor, destruktor, operator= -> default
+
+        Bucket& operator*() const { return *buck_ptr; }
+
+        Bucket* operator->() const { return buck_ptr; };
+
+        Iterator& operator++() {
+            buck_ptr = buck_ptr->next;
+            return *this;
+        }
+
+        Iterator& operator--(){
+            buck_ptr = buck_ptr->previous;
+            return *this;
+        }
+
+        Iterator operator++(int){
+            Iterator temp = *this;
+            buck_ptr = buck_ptr->next;
+            return temp;
+        }
+        Iterator operator--(int){
+            Iterator temp = *this;
+            buck_ptr = buck_ptr->previous;
+            return temp;
+        }
+        bool operator==(const Iterator& other) const{ return buck_ptr == other.buck_ptr;}
+        bool operator!=(const Iterator& other) const{ return buck_ptr != other.buck_ptr;}
+    };
+
+    Iterator begin() const { return {head}; }
+    Iterator end() const { return {nullptr}; }
+
 
     /** @brief konstruktor domyslny, jego zadaniem jest ustawienie pol klasy na brak elementow **/
     SortedUniqueVectoredList() = default;
@@ -80,22 +131,19 @@ public:
 
     /** @brief Metoda zwracajaca aktualnie posiadana ilosc elementow w kontenerze.
      *  @return wartosc `size_` **/
-    auto size() const
-    {
+    auto size() const {
         return size_;
     }
 
     /** @brief Metoda zwracajaca informacje ile elementow zmiesci sie w kontenerze.
      *  @return wartosc `capacity_` **/
-    auto capacity() const
-    {
+    auto capacity() const {
         return capacity_;
     }
 
     /** @brief Metoda zwracajaca informacje ile kubelkow jest obecnie zaallokowanych.
      *  @return wartosc `bucketCount_` **/
-    auto bucket_count() const
-    {
+    auto bucket_count() const {
         return bucketCount_;
     }
 
@@ -146,7 +194,8 @@ public:
     /** @brief Opcjonalne (nie ma na to testow) **/
     friend std::ostream& operator<<(std::ostream& stream, const SortedUniqueVectoredList& container);
 
-protected:
+protected
+:
     /** @brief metoda pomocnicza allokujaca nowy @ref Bucket na koncu listy (nowy @ref SortedUniqueVectoredList::tail)
      *  @note prosze pamietac o @ref SortedUniqueVectoredList::bucketCount_ @ref SortedUniqueVectoredList::capacity_ **/
     void allocate_new_bucket();
@@ -167,10 +216,8 @@ protected:
      *  @details nie musi byc optymalna, moze isc sekwencyjnie po wszystkich elementach **/
     bool contains(const std::string& value) const;
 
-private:
-    Bucket *head = nullptr, *tail = nullptr;
-
-    size_t bucketCount_{}, size_{}, capacity_{};
+private
+:
 };
 
 
