@@ -1,0 +1,54 @@
+[ 14%] Building CXX object tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 28%] Linking CXX static library ../../../lib/libgtest.a
+[ 28%] Built target gtest
+[ 42%] Building CXX object tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 57%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 57%] Built target gtest_main
+[ 71%] Building CXX object tests/CMakeFiles/tests.dir/SortedUniqueVectoredListTests.cpp.o
+[ 85%] Building CXX object tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.o
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘void SortedUniqueVectoredList::insert(const std::string&)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:69:53: error: unused parameter ‘value’ [-Werror=unused-parameter]
+   69 | void SortedUniqueVectoredList::insert(const string &value)
+      |                                       ~~~~~~~~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘void SortedUniqueVectoredList::erase(const std::string&)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:74:52: error: unused parameter ‘value’ [-Werror=unused-parameter]
+   74 | void SortedUniqueVectoredList::erase(const string &value)
+      |                                      ~~~~~~~~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘void SortedUniqueVectoredList::move(SortedUniqueVectoredList&&)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:98:64: error: unused parameter ‘another’ [-Werror=unused-parameter]
+   98 | void SortedUniqueVectoredList::move(SortedUniqueVectoredList &&another)
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘void SortedUniqueVectoredList::copy(const SortedUniqueVectoredList&)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:103:69: error: unused parameter ‘other’ [-Werror=unused-parameter]
+  103 | void SortedUniqueVectoredList::copy(const SortedUniqueVectoredList &other)
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘bool SortedUniqueVectoredList::contains(const std::string&) const’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:108:55: error: unused parameter ‘value’ [-Werror=unused-parameter]
+  108 | bool SortedUniqueVectoredList::contains(const string &value) const
+      |                                         ~~~~~~~~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘SortedUniqueVectoredList SortedUniqueVectoredList::operator-(const SortedUniqueVectoredList&) const’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:114:94: error: unused parameter ‘another’ [-Werror=unused-parameter]
+  114 | SortedUniqueVectoredList SortedUniqueVectoredList::operator-(const SortedUniqueVectoredList &another) const
+      |                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘SortedUniqueVectoredList& SortedUniqueVectoredList::operator*=(size_t)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:122:77: error: unused parameter ‘howManyTimesMultiply’ [-Werror=unused-parameter]
+  122 | SortedUniqueVectoredList &SortedUniqueVectoredList::operator*=(const size_t howManyTimesMultiply)
+      |                                                                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘std::string& SortedUniqueVectoredList::operator[](size_t)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:128:53: error: unused parameter ‘index’ [-Werror=unused-parameter]
+  128 | string &SortedUniqueVectoredList::operator[](size_t index)
+      |                                              ~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘const std::string& SortedUniqueVectoredList::operator[](size_t) const’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:135:59: error: unused parameter ‘index’ [-Werror=unused-parameter]
+  135 | const string& SortedUniqueVectoredList::operator[](size_t index) const
+      |                                                    ~~~~~~~^~~~~
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp: In member function ‘SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(const SortedUniqueVectoredList&)’:
+/tmp/tmp_c5tbqvb/student/SortedUniqueVectoredList.cpp:142:95: error: unused parameter ‘another’ [-Werror=unused-parameter]
+  142 | SortedUniqueVectoredList &SortedUniqueVectoredList::operator=(const SortedUniqueVectoredList &another)
+      |                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+cc1plus: all warnings being treated as errors
+make[3]: *** [tests/CMakeFiles/tests.dir/build.make:90: tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/Makefile2:454: tests/CMakeFiles/tests.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:461: tests/CMakeFiles/tests.dir/rule] Error 2
+make: *** [Makefile:312: tests] Error 2
