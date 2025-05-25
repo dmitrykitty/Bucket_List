@@ -129,7 +129,7 @@ public:
         @endcode
         @details Operator przypisania powinien **zwolnic pamiec** w razie potrzeby, aby nie dopuscic do wyciekow pamieci.
             Mozna uzyc [idiomu copy&swap](https://en.m.wikibooks.org/wiki/More_C%2B%2B_Idioms/Copy-and-swap). **/
-    SortedUniqueVectoredList& operator=(SortedUniqueVectoredList another);
+    SortedUniqueVectoredList& operator=(const SortedUniqueVectoredList& another);
     //IMPLEMENTED
 
     /** @brief operator przypisania, ktory ma za zadanie przeniesc zawartosc z obiektu zrodlowego
@@ -141,7 +141,7 @@ public:
         @details Operator przypisania przenoszacy powinien **zwolnic dotychczasowa pamiec**, aby nie dopuscic do wyciekow pamieci.
             Powinien tez zostawic obiekt zrodlowy w stanie jak po zawolaniu konstruktora domyslnego.
             Jak dobrze zaimplementujemy @ref SortedUniqueVectoredList::move i @ref SortedUniqueVectoredList::free to warto je zawolac **/
-    SortedUniqueVectoredList& operator=(SortedUniqueVectoredList&& another);
+    SortedUniqueVectoredList& operator=(SortedUniqueVectoredList&& another) noexcept;
     //IMPLEMENTED
 
     /** @brief Metoda zwracajaca aktualnie posiadana ilosc elementow w kontenerze.
@@ -203,6 +203,7 @@ public:
            // a zawiera ""
         @endcode **/
     SortedUniqueVectoredList& operator*=(const std::size_t howManyTimesMultiply);
+    //IMPLEMENTED
 
     /** @brief operator konwersji, ktory wszystkie teksty polaczy w jeden bez jakichkolwiek separatorow
      *  @return tekst zawierajacy wszystkie teksty **/
@@ -215,6 +216,7 @@ public:
 
     /** @brief Opcjonalne (nie ma na to testow) **/
     friend std::ostream& operator<<(std::ostream& stream, const SortedUniqueVectoredList& container);
+    //IMPLEMENTED
 
 protected
 :
@@ -238,7 +240,8 @@ protected
 
     /** @brief metoda pomocnicza kopiujaca z obiektu zrodlowego na *this.
      *  @note nalezy pamietac o zwalnianiu zasobow **/
-    //void copy(const SortedUniqueVectoredList& other);
+    void copy(const SortedUniqueVectoredList& other);
+    //IMPLEMENTED
 
     /** @brief metoda pomocnicza zwracajaca informacje czy dany element jest juz w kontenerze.
      *  @details nie musi byc optymalna, moze isc sekwencyjnie po wszystkich elementach **/
