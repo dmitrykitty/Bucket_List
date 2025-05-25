@@ -17,3 +17,6 @@
 814	5869	7698389978114912	bin/tests.exe	1ef207e78c5f2382
 10	1505	7698394915488635	tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.obj	553ad5471deaefa5
 1505	6967	7698394930435843	bin/tests.exe	1ef207e78c5f2382
+24	1304	7699107923462011	tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.obj	553ad5471deaefa5
+16	2974	7699107923317017	tests/CMakeFiles/tests.dir/SortedUniqueVectoredListTests.cpp.obj	451351beeff32881
+2974	8371	7699107952952421	bin/tests.exe	1ef207e78c5f2382
