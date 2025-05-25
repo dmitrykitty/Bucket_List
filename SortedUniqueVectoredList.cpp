@@ -67,22 +67,20 @@ SortedUniqueVectoredList::~SortedUniqueVectoredList() {
     free();
 }
 
-SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVectoredList&& another) {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
-    if (this != &another) {
-        this->move(std::move(another));
-    }
+SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVectoredList&& other) {
+    if (this == &other)
+        return *this;
+
+    free();
+    move(std::move(other));
     return *this;
 }
 
 void SortedUniqueVectoredList::insert(const std::string& value) {
-    for (auto& buck: *this)
-        for (size_t i = 0; i < buck.size; ++i)
-            if (buck.values[i] == value)
-                return;
+    if (contains(value))
+        return;
     if (!tail || tail->size >= Bucket::BUCKET_SIZE) {
-        Bucket* newBuck = new Bucket(value);
-        addBucket(*newBuck);
+        addBucket(Bucket(value));
     } else {
         tail->values[tail->size++] = value;
     }
@@ -137,32 +135,37 @@ void SortedUniqueVectoredList::free() {
 
 void SortedUniqueVectoredList::move(SortedUniqueVectoredList&& other) {
     head = other.head;
-    other.head = nullptr;
-
     tail = other.tail;
-    other.tail = nullptr;
 
     capacity_ = other.capacity_;
     size_ = other.size_;
     bucketCount_ = other.bucketCount_;
-    other.size_ = other.capacity_ = other.bucketCount_ = 0;
 }
 
-void SortedUniqueVectoredList::copy(const SortedUniqueVectoredList& other) {
-    if (&other == this)
-        return;
-}
+// void SortedUniqueVectoredList::copy(const SortedUniqueVectoredList& other) {
+//     if (&other == this)
+//         return;
+// }
 
 bool SortedUniqueVectoredList::contains(const std::string& value) const {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
+    for (const auto& buck: *this) {
+        for (size_t i = 0; i < buck.size; ++i) {
+            if (buck.values[i] == value)
+                return true;
+        }
+    }
     return false;
 }
 
-SortedUniqueVectoredList SortedUniqueVectoredList::operator-(const SortedUniqueVectoredList& another) const {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
-    SortedUniqueVectoredList ret;
-
-    return ret;
+SortedUniqueVectoredList SortedUniqueVectoredList::operator-(const SortedUniqueVectoredList& other) const {
+    SortedUniqueVectoredList res;
+    for (const auto& buck: *this) {
+        for (size_t i = 0; i < buck.size; ++i) {
+            if (!other.contains(buck.values[i]))
+                res.insert(buck.values[i]);
+        }
+    }
+    return res;
 }
 
 SortedUniqueVectoredList& SortedUniqueVectoredList::operator*=(const size_t howManyTimesMultiply) {
@@ -171,15 +174,34 @@ SortedUniqueVectoredList& SortedUniqueVectoredList::operator*=(const size_t howM
 }
 
 std::string& SortedUniqueVectoredList::operator[](size_t index) {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
+    if (index >= size_)
+        throw std::out_of_range("Invalid index");
 
-    throw std::out_of_range("");
+    int bucketIndex = index / Bucket::BUCKET_SIZE;
+    int stringIndex = index % Bucket::BUCKET_SIZE;
+
+    Bucket* current = head;
+    for (size_t i = 0; i < bucketIndex; ++i) {
+        current = current->next;
+    }
+    return current->values[stringIndex];
+
+
 }
 
 const std::string& SortedUniqueVectoredList::operator[](size_t index) const {
-    /// @todo zaimplementuj, szczegoly w pliku naglowkowym
+    if (index >= size_)
+        throw std::out_of_range("Invalid index");
 
-    throw std::out_of_range("");
+    size_t bucketIndex = index / Bucket::BUCKET_SIZE;
+    size_t stringIndex = index % Bucket::BUCKET_SIZE;
+
+    Bucket* current = head;
+    for (size_t i = 0; i < bucketIndex; ++i) {
+        current = current->next;
+    }
+
+    return current->values[stringIndex];
 }
 
 SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVectoredList other) {
@@ -187,11 +209,10 @@ SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVector
     return *this;
 }
 
-void SortedUniqueVectoredList::swap(SortedUniqueVectoredList& other) {
+void SortedUniqueVectoredList::swap(SortedUniqueVectoredList& other) noexcept {
     std::swap(capacity_, other.capacity_);
     std::swap(size_, other.size_);
     std::swap(bucketCount_, other.bucketCount_);
     std::swap(head, other.head);
     std::swap(tail, other.tail);
 }
-

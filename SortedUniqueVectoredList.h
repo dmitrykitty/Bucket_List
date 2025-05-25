@@ -44,7 +44,9 @@ class SortedUniqueVectoredList {
             values[0] = str;
         }
 
+        Bucket() = default;
         void removeAt(size_t index);
+
 
     };
     Bucket *head = nullptr, *tail = nullptr;
@@ -140,6 +142,7 @@ public:
             Powinien tez zostawic obiekt zrodlowy w stanie jak po zawolaniu konstruktora domyslnego.
             Jak dobrze zaimplementujemy @ref SortedUniqueVectoredList::move i @ref SortedUniqueVectoredList::free to warto je zawolac **/
     SortedUniqueVectoredList& operator=(SortedUniqueVectoredList&& another);
+    //IMPLEMENTED
 
     /** @brief Metoda zwracajaca aktualnie posiadana ilosc elementow w kontenerze.
      *  @return wartosc `size_` **/
@@ -174,15 +177,18 @@ public:
      *  @exception w razie podania
      *  @throw std::out_of_range w razie, gdy `index >= size_` **/
     std::string& operator[](std::size_t index);
+    //IMPLEMENTED
 
     /** @brief operator indeksowania, podobny do powyzszego @ref operator[], ale zwraca `const string` i jest metoda stala **/
     const std::string& operator[](std::size_t index) const;
+    //IMPLEMENTED
 
     /** @brief operator, ktory tworzy kontener zawierajacy wszystkie elementy z pierwszego kontenera, ktorych nie ma w kontenerze `another`
      *  @param another kontener, ktorego elementy maja byc usuniete z `this` o ile w nim sa
      *  @return Nowo-utworzony kontener zawierajacy wszystkie elementy z `*this`, ktorych nie ma w `another`
      *  @details Sugeruje utworzyc nowy kontener i wolac na nim @ref insert, dla elementow bedacych w this ale nie bedacych w `another` */
     SortedUniqueVectoredList operator-(const SortedUniqueVectoredList& another) const;
+    //IMPLEMENTED
 
     /** @brief operator, ktory kazdy ze skladowanych tekstow `this` zwielokrotni wskazana ilosc razy
      *  @note jest to operator modyfikujacy obiekt na rzecz ktorego jest wywolywany
@@ -227,16 +233,17 @@ protected
     void move(SortedUniqueVectoredList&& another);
     //IMPLEMENTED
 
-    void swap(SortedUniqueVectoredList& other);
+    void swap(SortedUniqueVectoredList& other) noexcept;
     //IMPLEMENTED
 
     /** @brief metoda pomocnicza kopiujaca z obiektu zrodlowego na *this.
      *  @note nalezy pamietac o zwalnianiu zasobow **/
-    void copy(const SortedUniqueVectoredList& other);
+    //void copy(const SortedUniqueVectoredList& other);
 
     /** @brief metoda pomocnicza zwracajaca informacje czy dany element jest juz w kontenerze.
      *  @details nie musi byc optymalna, moze isc sekwencyjnie po wszystkich elementach **/
     bool contains(const std::string& value) const;
+    //IMPLEMENTED
 
 };
 
