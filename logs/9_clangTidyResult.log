@@ -1,0 +1,65 @@
+make: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[1]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[2]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+[ 25%] Building CXX object CMakeFiles/zad9SortedUniqueVectoredList.dir/SortedUniqueVectoredList.cpp.o
+[ 50%] Building CXX object CMakeFiles/zad9SortedUniqueVectoredList.dir/main.cpp.o
+In file included from /tmp/tmp7xz_8co6/student/main.cpp:2:
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:36:46: error: field ‘values’ has incomplete type ‘std::array<std::__cxx11::basic_string<char>, 10>’
+   36 |         std::array<std::string, BUCKET_SIZE> values;
+      |                                              ^~~~~~
+In file included from /usr/include/c++/13/bits/uses_allocator_args.h:38,
+                 from /usr/include/c++/13/bits/memory_resource.h:41,
+                 from /usr/include/c++/13/string:58,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/ios:44,
+                 from /usr/include/c++/13/ostream:40,
+                 from /usr/include/c++/13/iostream:41,
+                 from /tmp/tmp7xz_8co6/student/main.cpp:1:
+/usr/include/c++/13/tuple:2005:45: note: declaration of ‘struct std::array<std::__cxx11::basic_string<char>, 10>’
+ 2005 |   template<typename _Tp, size_t _Nm> struct array;
+      |                                             ^~~~~
+/tmp/tmp7xz_8co6/student/main.cpp: In function ‘void validateStudentsInfo()’:
+/tmp/tmp7xz_8co6/student/main.cpp:49:48: error: static assertion failed: You must input your first name!
+   49 |     static_assert(compileTimeStrlen(FIRSTNAME) > 2, "You must input your first name!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp7xz_8co6/student/main.cpp:49:48: note: the comparison reduces to ‘(0 > 2)’
+/tmp/tmp7xz_8co6/student/main.cpp:50:46: error: static assertion failed: You must input your surname!
+   50 |     static_assert(compileTimeStrlen(SURNAME) > 2, "You must input your surname!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp7xz_8co6/student/main.cpp:50:46: note: the comparison reduces to ‘(0 > 2)’
+/tmp/tmp7xz_8co6/student/main.cpp:52:46: error: static assertion failed: You must input your student book id!
+   52 |     static_assert(compileTimeStrlen(BOOK_ID) > 1, "You must input your student book id!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp7xz_8co6/student/main.cpp:52:46: note: the comparison reduces to ‘(0 > 1)’
+/tmp/tmp7xz_8co6/student/main.cpp:55:43: error: static assertion failed: You must input your mail (preferred AGH mail)!
+   55 |     static_assert(compileTimeStrlen(MAIL) > 3, "You must input your mail (preferred AGH mail)!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp7xz_8co6/student/main.cpp:55:43: note: the comparison reduces to ‘(0 > 3)’
+/tmp/tmp7xz_8co6/student/main.cpp:56:38: error: non-constant condition for static assertion
+   56 |     static_assert(compileTimeContains(MAIL, '@'), "Invalid mail! It should contain '@'!");
+      |                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/tmp/tmp7xz_8co6/student/main.cpp:56:38:   in ‘constexpr’ expansion of ‘compileTimeContains(((const char*)MAIL), 64)’
+/tmp/tmp7xz_8co6/student/main.cpp:44:53:   in ‘constexpr’ expansion of ‘compileTimeContains((text + 1), ((int)letter))’
+/tmp/tmp7xz_8co6/student/main.cpp:41:17: error: array subscript value ‘1’ is outside the bounds of array type ‘const char [1]’
+   41 |     if ('\n' == *text)
+      |                 ^~~~~
+/tmp/tmp7xz_8co6/student/main.cpp:57:38: error: non-constant condition for static assertion
+   57 |     static_assert(compileTimeContains(MAIL, '.'), "Invalid mail! It should contain '.'!");
+      |                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/tmp/tmp7xz_8co6/student/main.cpp:57:38:   in ‘constexpr’ expansion of ‘compileTimeContains(((const char*)MAIL), 46)’
+/tmp/tmp7xz_8co6/student/main.cpp:44:53:   in ‘constexpr’ expansion of ‘compileTimeContains((text + 1), ((int)letter))’
+/tmp/tmp7xz_8co6/student/main.cpp:41:17: error: array subscript value ‘1’ is outside the bounds of array type ‘const char [1]’
+   41 |     if ('\n' == *text)
+      |                 ^~~~~
+make[3]: *** [CMakeFiles/zad9SortedUniqueVectoredList.dir/build.make:90: CMakeFiles/zad9SortedUniqueVectoredList.dir/main.cpp.o] Error 1
+make[3]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[2]: *** [CMakeFiles/Makefile2:167: CMakeFiles/zad9SortedUniqueVectoredList.dir/all] Error 2
+make[2]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[1]: *** [CMakeFiles/Makefile2:408: CMakeFiles/clang_tidy.dir/rule] Error 2
+make[1]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make: *** [Makefile:286: clang_tidy] Error 2
+make: Leaving directory '/tmp/tmp7xz_8co6/student/build'

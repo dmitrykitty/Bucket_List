@@ -6,29 +6,5 @@
 [ 57%] Built target gtest_main
 [ 71%] Building CXX object tests/CMakeFiles/tests.dir/SortedUniqueVectoredListTests.cpp.o
 [ 85%] Building CXX object tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.o
-/tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp: In member function ‘SortedUniqueVectoredList& SortedUniqueVectoredList::operator*=(size_t)’:
-/tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp:171:77: error: unused parameter ‘howManyTimesMultiply’ [-Werror=unused-parameter]
-  171 | SortedUniqueVectoredList& SortedUniqueVectoredList::operator*=(const size_t howManyTimesMultiply) {
-      |                                                                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
-/tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp: In member function ‘std::string& SortedUniqueVectoredList::operator[](size_t)’:
-/tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp:184:26: error: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘int’ [-Werror=sign-compare]
-  184 |     for (size_t i = 0; i < bucketIndex; ++i) {
-      |                        ~~^~~~~~~~~~~~~
-cc1plus: all warnings being treated as errors
-make[3]: *** [tests/CMakeFiles/tests.dir/build.make:90: tests/CMakeFiles/tests.dir/__/SortedUniqueVectoredList.cpp.o] Error 1
-make[3]: *** Waiting for unfinished jobs....
-/tmp/tmpxkvk6o50/student/tests/SortedUniqueVectoredListTests.cpp: In member function ‘virtual void SortedUniqueVectoredListTests_assignmentOperator_movingTextFromAnotherContainer_Test::TestBody()’:
-/tmp/tmpxkvk6o50/student/tests/SortedUniqueVectoredListTests.cpp:261:70: error: ambiguous overload for ‘operator=’ (operand types are ‘SortedUniqueVectoredList’ and ‘std::remove_reference<SortedUniqueVectoredList&>::type’ {aka ‘SortedUniqueVectoredList’})
-  261 |     sortedUniqueVectoredListCopy = std::move(sortedUniqueVectoredList);
-      |                                                                      ^
-In file included from /tmp/tmpxkvk6o50/student/tests/SortedUniqueVectoredListTests.cpp:9:
-/tmp/tmpxkvk6o50/student/tests/../SortedUniqueVectoredList.h:132:31: note: candidate: ‘SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVectoredList)’
-  132 |     SortedUniqueVectoredList& operator=(SortedUniqueVectoredList another);
-      |                               ^~~~~~~~
-/tmp/tmpxkvk6o50/student/tests/../SortedUniqueVectoredList.h:144:31: note: candidate: ‘SortedUniqueVectoredList& SortedUniqueVectoredList::operator=(SortedUniqueVectoredList&&)’
-  144 |     SortedUniqueVectoredList& operator=(SortedUniqueVectoredList&& another);
-      |                               ^~~~~~~~
-make[3]: *** [tests/CMakeFiles/tests.dir/build.make:76: tests/CMakeFiles/tests.dir/SortedUniqueVectoredListTests.cpp.o] Error 1
-make[2]: *** [CMakeFiles/Makefile2:454: tests/CMakeFiles/tests.dir/all] Error 2
-make[1]: *** [CMakeFiles/Makefile2:461: tests/CMakeFiles/tests.dir/rule] Error 2
-make: *** [Makefile:312: tests] Error 2
+[100%] Linking CXX executable ../bin/tests
+[100%] Built target tests

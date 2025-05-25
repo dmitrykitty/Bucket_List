@@ -16,24 +16,24 @@
 -- Looking for __ubsan_handle_add_overflow in ubsan - found
 -- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
 -- Znaleziono include-what-you-use: /usr/bin/include-what-you-use
--- Używany mapping IWYU: /tmp/tmpxkvk6o50/student/tests/include-what-you-use_exceptions.imp
-Katalog do zbudowanego projektu: /tmp/tmpxkvk6o50/student/build
- + Znaleziono nagłówki: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.h
- + Znaleziono źródła: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp;/tmp/tmpxkvk6o50/student/main.cpp
- + Znaleziono źródła bez main.cpp: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp
+-- Używany mapping IWYU: /tmp/tmp7xz_8co6/student/tests/include-what-you-use_exceptions.imp
+Katalog do zbudowanego projektu: /tmp/tmp7xz_8co6/student/build
+ + Znaleziono nagłówki: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h
+ + Znaleziono źródła: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp;/tmp/tmp7xz_8co6/student/main.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp
 	* valgrind found: /usr/bin/valgrind
 	* cppcheck found: /usr/local/bin/cppcheck
-	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.h and /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp;/tmp/tmpxkvk6o50/student/main.cpp
-	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp;/tmp/tmpxkvk6o50/student/main.cpp and /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.h
-	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.cpp;/tmp/tmpxkvk6o50/student/main.cpp and /tmp/tmpxkvk6o50/student/SortedUniqueVectoredList.h
+	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h and /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp;/tmp/tmp7xz_8co6/student/main.cpp
+	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp;/tmp/tmp7xz_8co6/student/main.cpp and /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h
+	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp;/tmp/tmp7xz_8co6/student/main.cpp and /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h
 -- Looking for pthread.h
 -- Looking for pthread.h - found
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE  
- + Znaleziono pliki testów: /tmp/tmpxkvk6o50/student/tests/SortedUniqueVectoredListTests.cpp
+ + Znaleziono pliki testów: /tmp/tmp7xz_8co6/student/tests/SortedUniqueVectoredListTests.cpp
  + katalog nagłówków: 
 	* perf found: /usr/bin/perf, so adding command: 'perf_stats_tests'
 -- Configuring done
 -- Generating done
--- Build files have been written to: /tmp/tmpxkvk6o50/student/build
+-- Build files have been written to: /tmp/tmp7xz_8co6/student/build

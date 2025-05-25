@@ -1,0 +1,39 @@
+Running main() from /tmp/tmp7xz_8co6/student/tests/lib/googletest/src/gtest_main.cc
+[==========] Running 15 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 15 tests from SortedUniqueVectoredListTests
+[ RUN      ] SortedUniqueVectoredListTests.defaultConstructor_sizeOfEmptyContainerIsZero
+[       OK ] SortedUniqueVectoredListTests.defaultConstructor_sizeOfEmptyContainerIsZero (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.pushBack_sizeOfContainerIncreaseAfterCallingPushBack
+[       OK ] SortedUniqueVectoredListTests.pushBack_sizeOfContainerIncreaseAfterCallingPushBack (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.arrayIndexingOperator_testsInTheSamePositionsAsPushed
+[       OK ] SortedUniqueVectoredListTests.arrayIndexingOperator_testsInTheSamePositionsAsPushed (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.arrayIndexingOperator_throwingExceptionWhenOutOfRange
+[       OK ] SortedUniqueVectoredListTests.arrayIndexingOperator_throwingExceptionWhenOutOfRange (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.copyConstructor_textsDeeplyCopied
+[       OK ] SortedUniqueVectoredListTests.copyConstructor_textsDeeplyCopied (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.assignmentOperator_copyingContainerDeeply
+[       OK ] SortedUniqueVectoredListTests.assignmentOperator_copyingContainerDeeply (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve
+[       OK ] SortedUniqueVectoredListTests.assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.assignmentOperator_movingTextFromAnotherContainer
+[       OK ] SortedUniqueVectoredListTests.assignmentOperator_movingTextFromAnotherContainer (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.subtractOperator_expectReturningContainerContainingElementsFromFirstContainerWhichAreNotInAnotherContainers
+[       OK ] SortedUniqueVectoredListTests.subtractOperator_expectReturningContainerContainingElementsFromFirstContainerWhichAreNotInAnotherContainers (1 ms)
+[ RUN      ] SortedUniqueVectoredListTests.multiplyAssignmentOperator_expectedMultiplyingTextManyTimes
+[       OK ] SortedUniqueVectoredListTests.multiplyAssignmentOperator_expectedMultiplyingTextManyTimes (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.pushBack_pushingNotSortedElements_expectedElementsInContainerSorted
+[       OK ] SortedUniqueVectoredListTests.pushBack_pushingNotSortedElements_expectedElementsInContainerSorted (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.pushBack_pushingNotSortedNotUniqueElements_expectedElementsInContainerUniqueAndSorted
+[       OK ] SortedUniqueVectoredListTests.pushBack_pushingNotSortedNotUniqueElements_expectedElementsInContainerUniqueAndSorted (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.pushingManyElements_expectedAllOfThemInContainerAndNothingBadhappen
+[       OK ] SortedUniqueVectoredListTests.pushingManyElements_expectedAllOfThemInContainerAndNothingBadhappen (1983 ms)
+[ RUN      ] SortedUniqueVectoredListTests.conversion2StringOperator_expectedAllTextsConcatened
+[       OK ] SortedUniqueVectoredListTests.conversion2StringOperator_expectedAllTextsConcatened (0 ms)
+[ RUN      ] SortedUniqueVectoredListTests.copying_copyingEmptyContainer
+[       OK ] SortedUniqueVectoredListTests.copying_copyingEmptyContainer (0 ms)
+[----------] 15 tests from SortedUniqueVectoredListTests (1990 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test suite ran. (1990 ms total)
+[  PASSED  ] 15 tests.

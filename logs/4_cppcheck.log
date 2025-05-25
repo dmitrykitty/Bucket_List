@@ -1,0 +1,15 @@
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:43:9: warning: Struct 'Bucket' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        Bucket(const std::string& str): size(1) {
+        ^
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:62:9: warning: Class 'Iterator' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        Iterator(Bucket* ptr): buck_ptr(ptr) {}
+        ^
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:89:16: warning: Variable 's' can be declared as reference to const [constVariable]
+    for (auto& s : all) {
+               ^
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:126:16: warning: Variable 'buck' can be declared as reference to const [constVariable]
+    for (auto& buck: *this)
+               ^
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:99:0: warning: The function 'erase' is never used. [unusedFunction]
+void SortedUniqueVectoredList::erase(const std::string& value) {
+^

@@ -1,0 +1,94 @@
+make: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[1]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[2]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[3]: Entering directory '/tmp/tmp7xz_8co6/student/build'
+[100%] Running cpplint to check for tabs and trailing whitespace
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:1:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:39:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:57:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:65:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:126:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:177:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:186:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:188:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:197:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:198:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:240:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:245:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:247:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:252:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:260:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp:261:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:42:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:50:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:55:  public: should be indented +1 space inside class SortedUniqueVectoredList  [whitespace/indent] [3]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:59:  public: should be indented +1 space inside class Iterator  [whitespace/indent] [3]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:63:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:74:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:79:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:84:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:89:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:89:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:90:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:99:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:106:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:113:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:118:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:132:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:133:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:144:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:145:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:173:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:180:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:182:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:184:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:190:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:191:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:205:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:206:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:211:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:213:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:215:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:218:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:219:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:226:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:231:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:236:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:239:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:244:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:249:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:250:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+/tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h:254:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:10:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:10:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:16:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:20:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:25:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:30:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:31:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:31:  Missing spaces around <=  [whitespace/operators] [3]
+/tmp/tmp7xz_8co6/student/main.cpp:35:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:39:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:40:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:48:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmp7xz_8co6/student/main.cpp:49:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:50:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:52:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:53:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:55:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:56:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmp7xz_8co6/student/main.cpp:57:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.cpp
+Done processing /tmp/tmp7xz_8co6/student/SortedUniqueVectoredList.h
+Done processing /tmp/tmp7xz_8co6/student/main.cpp
+Total errors found: 75
+make[3]: *** [CMakeFiles/cpplint.dir/build.make:71: CMakeFiles/cpplint] Error 1
+make[3]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[2]: *** [CMakeFiles/Makefile2:375: CMakeFiles/cpplint.dir/all] Error 2
+make[2]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make[1]: *** [CMakeFiles/Makefile2:382: CMakeFiles/cpplint.dir/rule] Error 2
+make[1]: Leaving directory '/tmp/tmp7xz_8co6/student/build'
+make: *** [Makefile:273: cpplint] Error 2
+make: Leaving directory '/tmp/tmp7xz_8co6/student/build'

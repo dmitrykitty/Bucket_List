@@ -1,0 +1,172 @@
+{
+  "tests": 15,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2025-05-25T01:31:00Z",
+  "time": "1.99s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "SortedUniqueVectoredListTests",
+      "tests": 15,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2025-05-25T01:31:00Z",
+      "time": "1.99s",
+      "testsuite": [
+        {
+          "name": "defaultConstructor_sizeOfEmptyContainerIsZero",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 52,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "pushBack_sizeOfContainerIncreaseAfterCallingPushBack",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 60,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "arrayIndexingOperator_testsInTheSamePositionsAsPushed",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 84,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "arrayIndexingOperator_throwingExceptionWhenOutOfRange",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 113,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "copyConstructor_textsDeeplyCopied",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 130,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "assignmentOperator_copyingContainerDeeply",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 167,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "assignmentOperator_assignmentCascadeAtOnceExpectingDeepCopyMultipleTimesEvenWithItselve",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 206,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "assignmentOperator_movingTextFromAnotherContainer",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 237,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "subtractOperator_expectReturningContainerContainingElementsFromFirstContainerWhichAreNotInAnotherContainers",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 273,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0.001s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "multiplyAssignmentOperator_expectedMultiplyingTextManyTimes",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 325,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "pushBack_pushingNotSortedElements_expectedElementsInContainerSorted",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 351,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "pushBack_pushingNotSortedNotUniqueElements_expectedElementsInContainerUniqueAndSorted",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 387,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "pushingManyElements_expectedAllOfThemInContainerAndNothingBadhappen",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 424,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:00Z",
+          "time": "1.983s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "conversion2StringOperator_expectedAllTextsConcatened",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 444,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:02Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        },
+        {
+          "name": "copying_copyingEmptyContainer",
+          "file": "\/tmp\/tmp7xz_8co6\/student\/tests\/SortedUniqueVectoredListTests.cpp",
+          "line": 485,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-25T01:31:02Z",
+          "time": "0s",
+          "classname": "SortedUniqueVectoredListTests"
+        }
+      ]
+    }
+  ]
+}
